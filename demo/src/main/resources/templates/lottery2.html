@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <title>抽奖</title>
+    <link rel="stylesheet" href="style_cj.css"/>
+    <style>
+        .alert_ty_4 {
+            width: 100%;
+            position: absolute;
+            background: rgba(0, 0, 0, 0.7);
+            height: 100%;
+            top: 0;
+            display: none;
+        }
+
+        .alert_ty_content_4 {
+            width: 60%;
+            position: relative;
+            top: 30%;
+            box-sizing: border-box;
+            margin-left: 20%;
+            top: 30%;
+            border-radius: 5px;
+            text-align: center;
+            background: #ffffff;
+            font-size: 16px;
+            color: #333;
+            padding: 0 10px;
+        }
+
+        .alert_ty_content_4 p {
+            padding: 8% 0;
+            line-height: 25px;
+        }
+
+        .content_qr {
+            border-top: 1px solid #ccc;
+            padding: 4% 0;
+        }
+
+        .alert_ty_content_4 .btn_close {
+            bottom: -70px;
+        }
+
+        .prize_number {
+            position: absolute;
+            z-index: 100;
+            color: #fff;
+            text-align: center;
+            width: 100%;
+            margin-top:4%;
+            font-size:13px;
+        }
+        .prize_number font{
+            font-size:16px;
+            margin:0 4px;
+        }
+        @media screen and (min-width:414px){
+            .prize_number {
+                position: absolute;
+                z-index: 100;
+                color: #fff;
+                text-align: center;
+                width: 100%;
+                margin-top:4%;
+                font-size:15px;
+            }
+            .prize_number font{
+                font-size:18px;
+                margin:0 4px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<img src="images/bj.png" class="bj_content"/>
+<!--转盘部分-->
+<div class="cj_title">
+    <img src="images/title.png"/>
+</div>
+<div id="lottery">
+    <img src="images/bj_zp.png" class="bj_zp"/>
+    <table border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td class="lottery-unit lottery-unit-0">
+                <img src="images/jdq.png" class="bg_g"/>
+                <div class="mask"></div>
+            </td>
+            <td class="lottery-unit lottery-unit-1">
+                <img src="images/zjzl.png" class="bg_g"/>
+                <div class="mask"></div>
+            </td>
+            <td class="lottery-unit lottery-unit-2">
+                <img src="images/swhjd.png" class="bg_g"/>
+                <div class="mask"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="lottery-unit lottery-unit-7">
+                <img src="images/syd_20.png" class="bg_g"/>
+                <div class="mask"></div>
+            </td>
+            <td>
+                <a href="#"><img src="images/btn_cj.png"/><!-- 抽奖 -->
+                    <div class="time_number">还剩<font>5</font>次机会</div>
+                </a>
+            </td>
+            <td class="lottery-unit lottery-unit-3">
+                <img src="images/syd_500.png" class="bg_g"/>
+                <div class="mask"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="lottery-unit lottery-unit-6">
+                <img src="images/syd_2000.png" class="bg_g"/>
+                <div class="mask"></div>
+            </td>
+            <td class="lottery-unit lottery-unit-5">
+                <img src="images/zjzl.png" class="bg_g"/>
+                <div class="mask"></div>
+            </td>
+            <td class="lottery-unit lottery-unit-4">
+                <img src="images/czk_200.png" class="bg_g"/>
+                <div class="mask"></div>
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="cj_midden">
+    <font class="btn_zj">
+        中奖
+    </font>
+    <font class="btn_wzj">
+        未中奖
+    </font>
+    <font onclick="window.open('gz.html','_self')">活动规则</font>
+    <font class="my_price">我的中奖明细</font>
+</div>
+<div class="zjmd">
+    <img src="images/zjmd.png" class="cj_zjmd"/>
+    <marquee direction="up" scrolldelay="100" scrollamount="2" class="zjmd_text">
+        <div>我的中奖明细我的中奖明细</div>
+        <div>我的中奖明细我的中奖明细</div>
+        <div>我的中奖明细我的中奖明细</div>
+        <div>我的中奖明细我的中奖明细</div>
+        <div>我的中奖明细我的中奖明细</div>
+        <div>我的中奖明细我的中奖明细</div>
+    </marquee>
+</div>
+<div class="alert_ty">
+    <div class="alert_ty_content">
+        <div class="border_blue">
+            <div class="border_white">
+                <img src="images/cj_title.png" class="cj_img_title"/>
+                <div class="cj_text">
+                    <div class="text_list">
+                        <div class="syd">20苏银豆</div>
+                        <div class="syd_time">2017-03-22</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="images/close.png" class="btn_close"/>
+    </div>
+</div>
+<!--中奖-->
+<div class="alert_ty_2">
+    <div class="alert_ty_content_2 animated bounceIn">
+        <img src="images/zj_bj.png" class="zj_bj"/>
+        <div class="zj_content">
+            <font>恭喜中奖啦！</font>
+            <p><img src="images/btn_lq.png" class="btn_lq"/></p>
+        </div>
+    </div>
+</div>
+<!--未中奖-->
+<div class="alert_ty_3">
+    <div class="alert_ty_content_3">
+        <img src="images/yh.png" class="yh_img"/>
+        <p id="world">很遗憾您已经没有抽奖机会了</p>
+        <img src="images/close.png" class="btn_close"/>
+    </div>
+</div>
+<div class="alert_ty_4">
+    <div class="alert_ty_content_4">
+        <p>花费6苏银豆<br/>购买一次抽奖机会</p>
+        <div class="content_qr">
+            确认
+        </div>
+        <img src="images/close.png" class="btn_close"/>
+    </div>
+</div>
+<script src="jquery.min.js"></script>
+<script src="lottery.js"></script>
+<!--效果html结束-->
+
+</body>
+
+</html>
